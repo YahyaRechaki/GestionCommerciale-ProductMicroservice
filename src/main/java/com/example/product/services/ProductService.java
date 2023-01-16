@@ -21,6 +21,10 @@ public class ProductService {
         productRepository.save(product);
         return "Product : " + product.getName() + ", is added successfully !";
     }
+    public void addProducts(List<Product> products) {
+        productRepository.saveAll(products);
+    }
+
     /*public String deleteProduct(Product product){
         System.out.println("product : " + product);
         System.out.println("1 findByName(product.getName()) : " + findByName(product.getName()));
